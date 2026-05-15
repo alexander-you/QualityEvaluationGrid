@@ -1,0 +1,224 @@
+/* Main Container */
+.quality-grid-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #ffffff;
+  direction: ltr;
+}
+
+/* RTL Support */
+.quality-grid-container[dir="rtl"] {
+  direction: rtl;
+}
+
+/* Grid Table */
+.quality-grid-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+}
+
+/* Header */
+.quality-grid-header {
+  background: #f3f2f1;
+  border-bottom: 2px solid #edebe9;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.quality-grid-header th {
+  padding: 12px 16px;
+  text-align: start;
+  font-weight: 600;
+  font-size: 14px;
+  color: #323130;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.quality-grid-header th:hover {
+  background: #e1dfdd;
+}
+
+.quality-grid-header th.sortable::after {
+  content: " ⇅";
+  opacity: 0.3;
+  font-size: 12px;
+}
+
+.quality-grid-header th.sort-asc::after {
+  content: " ▲";
+  opacity: 1;
+  color: #0078d4;
+}
+
+.quality-grid-header th.sort-desc::after {
+  content: " ▼";
+  opacity: 1;
+  color: #0078d4;
+}
+
+/* Body */
+.quality-grid-body tr {
+  border-bottom: 1px solid #edebe9;
+  transition: background 0.2s;
+}
+
+.quality-grid-body tr:hover {
+  background: #f3f2f1;
+}
+
+.quality-grid-body tr.selected {
+  background: #deecf9;
+}
+
+.quality-grid-body td {
+  padding: 12px 16px;
+  font-size: 14px;
+  color: #323130;
+  vertical-align: middle;
+}
+
+/* Checkbox */
+.grid-checkbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #0078d4;
+}
+
+/* Score Badge */
+.score-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #ffffff;
+  text-align: center;
+  min-width: 60px;
+}
+
+/* Status Badge - Rounded */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-weight: 500;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.status-badge-icon {
+  font-size: 12px;
+}
+
+/* Record Type with Icon */
+.record-type-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.record-type-icon {
+  font-size: 16px;
+  min-width: 20px;
+}
+
+/* Evaluation Method with Icon */
+.evaluation-method-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.evaluation-method-icon {
+  font-size: 16px;
+  min-width: 20px;
+}
+
+/* User Lookup with Avatar */
+.user-lookup-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #0078d4;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.user-name {
+  font-weight: 500;
+}
+
+/* Date Formatting */
+.date-cell {
+  color: #605e5c;
+  font-size: 13px;
+}
+
+/* Loading State */
+.grid-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  color: #605e5c;
+  font-size: 14px;
+}
+
+/* Empty State */
+.grid-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  color: #a19f9d;
+  font-size: 14px;
+}
+
+/* Scrollbar Styling */
+.quality-grid-container::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.quality-grid-container::-webkit-scrollbar-track {
+  background: #f3f2f1;
+}
+
+.quality-grid-container::-webkit-scrollbar-thumb {
+  background: #c8c6c4;
+  border-radius: 4px;
+}
+
+.quality-grid-container::-webkit-scrollbar-thumb:hover {
+  background: #a19f9d;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .quality-grid-body td,
+  .quality-grid-header th {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+}

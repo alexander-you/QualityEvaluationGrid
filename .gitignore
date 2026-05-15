@@ -1,0 +1,51 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+
+# generated directory
+**/generated
+
+# output directory
+/out
+
+# msbuild output directories
+/bin
+/obj
+**/bin
+**/obj
+
+# MSBuild Binary and Structured Log
+*.binlog
+
+# Visual Studio cache/options directory
+/.vs
+
+# macos
+.DS_Store
+
+# solution zip outputs
+Solution/bin/
+Solution/obj/
+
+# pcf test harness
+/pcf-scripts-temp/
+
+# editor files
+*.swp
+*.swo
+*~
+
+# error logs
+errors.txt
+
+# recording / screen capture project files
+*.tscproj/
+*.wav
+*.trec
+
+# old documentation (superseded by README.md)
+QualityEvaluationGrid.md
+
+# lock files (optional — remove this line if you want reproducible builds)
+# package-lock.json

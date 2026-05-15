@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="YurpolskyV2" constructor="QualityEvaluationGrid" version="1.0.15" display-name-key="Enhanced Quality Evaluation Grid" description-key="Enhanced Quality Evaluation Grid" control-type="standard">
+
+    <data-set name="dataSet" display-name-key="Dataset_Display_Key">
+    </data-set>
+
+    <property name="ColorConfig" display-name-key="Color Configuration (JSON)" description-key="JSON config for status colors and score ranges" of-type="SingleLine.Text" usage="input" required="false" />
+
+    <resources>
+      <code path="index.ts" order="1"/>
+      <css path="css/QualityGrid.css" order="1" />
+      </resources>
+
+    <feature-usage>
+      <uses-feature name="Utility" required="true" />
+      <uses-feature name="WebAPI" required="true" />
+    </feature-usage>
+  </control>
+</manifest>
