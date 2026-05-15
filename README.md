@@ -2,7 +2,10 @@
 
 A custom **PowerApps Component Framework (PCF)** control for **Dynamics 365 Customer Service** that replaces the default evaluation subgrid with a feature-rich, interactive data grid purpose-built for quality management workflows.
 
-![Demo](QualityEvaluationGrid.mp4)
+
+<img width="2488" height="1064" alt="image" src="https://github.com/user-attachments/assets/32bbbd84-e663-4396-af13-8985f7e71532" />
+
+
 
 ## Key Benefits
 
